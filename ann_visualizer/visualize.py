@@ -90,9 +90,9 @@ def ann_viz(model, view=True, filename="network.gv", title="My Neural Network"):
         with g.subgraph(name='cluster_input') as c:
             if(type(model.layers[0]) == keras.layers.core.Dense):
                 the_label = title+'\n\n\n\nInput Layer';
-                if (int(str(model.layers[0].input_shape).split(",")[1][1:-1]) > 10):
-                    the_label += " (+"+str(int(str(model.layers[0].input_shape).split(",")[1][1:-1]) - 10)+")";
-                    input_layer = 10;
+                #if (int(str(model.layers[0].input_shape).split(",")[1][1:-1]) > 10):
+                #    the_label += " (+"+str(int(str(model.layers[0].input_shape).split(",")[1][1:-1]) - 10)+")";
+                #    input_layer = 10;
                 c.attr(color='white')
                 for i in range(0, input_layer):
                     n += 1;
